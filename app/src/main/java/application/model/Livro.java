@@ -2,7 +2,7 @@ package application.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.persistence.ID;
+import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
@@ -10,7 +10,7 @@ import jakarta.persistence.GenerationType;
 @Table(name="livros")
 public class Livro {
     @Id
-    @GeneratedValue(strategy = GeneratonType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private int id;
     private String titulo;
