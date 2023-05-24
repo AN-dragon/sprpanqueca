@@ -22,12 +22,12 @@ public class LivroController {
     public String list(Model model) {
         model.addAttribute("livros", livroRepo.findAll());
 
-        return "/WEB-INF/livro/list.jsp";
+        return "livro/list";
     }
 
     @RequestMapping("/insert")
     public String insert() {
-        return "/WEB-INF/livro/insert.jsp";
+        return "livro/insert";
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)

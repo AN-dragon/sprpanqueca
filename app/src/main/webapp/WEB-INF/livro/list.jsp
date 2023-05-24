@@ -5,25 +5,32 @@
     <head>
         <meta charset="UTF-8" />
         <title>Livros</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
     </head>
     <body>
-        <h1>Livros</h1>
-        <h2>GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
+        <div class="container">
+            <h1>Livros</h1>
+            <h2>GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
 
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Título</th>
-            </tr>
+            <a href="/livro/insert" class="btn btn-primary">Novo Livro</a>
 
-            <c:forEach var="litem" items="${livros}">
+            <table class="table">
                 <tr>
-                    <td>${litem.id}</td>
-                    <td>${litem.titulo}</td>
+                    <th>Id</th>
+                    <th>Título</th>
                 </tr>
-            </c:forEach>
 
-        </table>
+             <c:forEach var="litem" items="${livros}">
+                    <tr>
+                        <td>${litem.id}</td>
+                        <td>${litem.titulo}</td>
+                    </tr>
+                </c:forEach>
+
+            </table>
+
+        </div>
+
     </body>
 </html>
 
