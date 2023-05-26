@@ -70,4 +70,15 @@ public class LivroController {
         
     }
 
+    @RequestMapping("/delete")
+    public String delete(Model model, @RequestParam("id") int id) {
+        Optional<Livro> livro = livroRepo.findById(id);
+
+        if(livro.isPresent()) {
+            model.addAttribute("livro", livro.get());
+            return "/livro/delete";
+        }
+            //precisa terminar aqui
+        return "redirect:/livro/list";
+    }
 }
