@@ -7,6 +7,9 @@
     </head>
     <body>
         <h1>Olá Spring!!!</h1>
+        <a href="livro/list" style="color: crimson; text-decoration: none;">
+            Ver lista de livros
+        </a>
     </body>
 </html>
 

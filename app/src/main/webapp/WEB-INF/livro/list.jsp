@@ -9,8 +9,8 @@
     </head>
     <body>
         <div class="container">
-            <h1>Livros</h1>
-            <h2>GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
+            <h1 style="text-align: center;">Livros</h1>
+            <h2 style="color:#f9f9f9">GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
 
             <a href="/livro/insert" class="btn btn-primary">Novo Livro</a>
 
@@ -18,19 +18,20 @@
                 <tr>
                     <th>Id</th>
                     <th>Título</th>
+                    <th>&nbsp;</th>
                 </tr>
 
-             <c:forEach var="litem" items="${livros}">
+                <c:forEach var="litem" items="${livros}">
                     <tr>
                         <td>${litem.id}</td>
                         <td>${litem.titulo}</td>
+                        <td>
+                            <a href="/livro/update?id=${litem.id}" class="btn btn-warning">Editar</a>
+                        </td>
                     </tr>
                 </c:forEach>
-
             </table>
 
         </div>
-
     </body>
 </html>
-
