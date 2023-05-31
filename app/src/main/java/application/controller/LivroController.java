@@ -76,9 +76,10 @@ public class LivroController {
 
         if(livro.isPresent()) {
             model.addAttribute("livro", livro.get());
+            livroRepo.delete(livro.get());
             return "/livro/delete";
         }
-            //precisa terminar aqui
+        
         return "redirect:/livro/list";
     }
 }
