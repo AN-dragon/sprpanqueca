@@ -20,6 +20,11 @@
                     <input type="text" name="titulo" class="form-control" />
                 </div>
 
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" name="isbn" class="form-control" />
+                </div>
+
                 <br />
 
                 <a href="/livro/list" class="btn btn-primary">Voltar</a>

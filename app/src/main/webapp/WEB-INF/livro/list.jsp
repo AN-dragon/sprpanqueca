@@ -25,6 +25,7 @@
                     <tr>
                         <td>${litem.id}</td>
                         <td>${litem.titulo}</td>
+                        <td>${litem.isbn}</td>
                         <td>
                             <a href="/livro/update?id=${litem.id}" class="btn btn-warning">Editar</a>
                             <a href="/livro/delete?id=${litem.id}" class="btn btn-danger">Remover</a>
