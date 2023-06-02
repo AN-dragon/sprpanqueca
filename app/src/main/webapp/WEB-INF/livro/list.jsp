@@ -10,7 +10,6 @@
     <body>
         <div class="container">
             <h1 style="text-align: center;">Livros</h1>
-            <h2 style="color:#f9f9f9">GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
 
             <a href="/livro/insert" class="btn btn-primary">Novo Livro</a>
 
@@ -18,6 +17,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Título</th>
+                    <th>ISBN</th>
                     <th>&nbsp;</th>
                 </tr>
 

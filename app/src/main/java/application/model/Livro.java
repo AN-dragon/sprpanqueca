@@ -14,6 +14,7 @@ public class Livro {
     
     private int id;
     private String titulo;
+    private String isbn;
 
 //get e set do id
     public int getId() {
@@ -31,4 +32,11 @@ public class Livro {
         this.titulo = titulo;
     }
 
+//get e set do isbn
+    public String getIsbn() {
+        return isbn;
+    }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 }
