@@ -21,6 +21,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="genero">Gênero:</label>
+                    <input type="text" name="genero" class="form-control" />
+                </div>
+
+                <div class="form-group">
                     <label for="isbn">ISBN:</label>
                     <input type="text" name="isbn" class="form-control" />
                 </div>
