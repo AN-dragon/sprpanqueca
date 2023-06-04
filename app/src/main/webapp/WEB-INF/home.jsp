@@ -7,13 +7,18 @@
     </head>
     <body>
         <h1>Olá Spring!!!</h1>
-        <a href="livro/list" style="color: crimson; text-decoration: none;">
-            Ver lista de livros
-        </a>
+        <p style="text-align: center;">
+            <a href="livro/list" style="color: crimson; text-decoration: none; font-size: 18px;">
+                Ver lista de livros
+            </a>
+        </p>
 
-        <a href="genero/list" style="color: #00ffd5; text-decoration: none;">
-            Ver lista de gêneros
-        </a>
+        <p style="text-align: center;">
+            <a href="genero/list" style="color: #007c67; text-decoration: none; font-size: 18px;">
+                Ver lista de gêneros
+            </a>
+        </p>
+        
     </body>
 </html>
 

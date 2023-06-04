@@ -38,6 +38,46 @@ public class GeneroController {
         genero.setNome(nome);
 
         generoRepo.save(genero);
-        return "redirect:/livro/list";
+        return "redirect:/genero/list";
+    }
+
+    @RequestMapping("/update")
+    public String update(Model model, @RequestParam("id") int id) {
+        Optional<Genero> genero = generoRepo.findById(id);
+
+        if(genero.isPresent()) {
+            model.addAttribute("genero", genero.get());
+            return "/genero/update";
+        }
+
+        return "redirect:/genero/list";
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update( 
+        @RequestParam("id") int id, 
+        @RequestParam("nome") String nome) {
+
+        Optional<Genero> genero = generoRepo.findById(id);
+
+        if(genero.isPresent()) {
+            genero.get().setNome(nome);
+            generoRepo.save(genero.get());
+        }
+
+        return "redirect:/genero/list";
+    }
+
+    @RequestMapping("/delete")
+    public String delete(Model model, @RequestParam("id") int id) {
+        Optional<Genero> genero = generoRepo.findById(id);
+
+        if(genero.isPresent()) {
+            model.addAttribute("genero", genero.get());
+            generoRepo.delete(genero.get());
+            return "/genero/delete";
+        }
+        
+        return "redirect:/genero/list";
     }
 }
