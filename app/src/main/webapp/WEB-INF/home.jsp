@@ -10,6 +10,10 @@
         <a href="livro/list" style="color: crimson; text-decoration: none;">
             Ver lista de livros
         </a>
+
+        <a href="genero/list" style="color: #00ffd5; text-decoration: none;">
+            Ver lista de gêneros
+        </a>
     </body>
 </html>
 

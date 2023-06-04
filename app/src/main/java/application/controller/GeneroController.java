@@ -17,7 +17,7 @@ import application.model.GeneroRepository;
 public class GeneroController {
     
     @Autowired
-    private GeneroController generoRepo;
+    private GeneroRepository generoRepo;
 
     @RequestMapping("/list")
     public String list(Model model) {
@@ -29,5 +29,15 @@ public class GeneroController {
     @RequestMapping("/insert")
     public String insert() {
         return "genero/insert";
+    }
+
+    @RequestMapping(value = "/insert", method = RequestMethod.POST)
+    public String insert(
+        @RequestParam("nome") String nome) {
+        Genero genero = new Genero();
+        genero.setNome(nome);
+
+        generoRepo.save(genero);
+        return "redirect:/livro/list";
     }
 }
