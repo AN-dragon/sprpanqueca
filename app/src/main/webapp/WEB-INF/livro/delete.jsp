@@ -19,7 +19,7 @@
                 <br />
 
                 <a href="/livro/list" class="btn btn-primary">Voltar</a>
-                <button type="submit" class="btn btn-success">Remover</button>
+                <button type="submit" class="btn btn-danger">Remover</button>
             </form>
 
         </div>

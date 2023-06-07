@@ -80,4 +80,11 @@ public class GeneroController {
         
         return "redirect:/genero/list";
     }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String delete(@RequestParam("id") int id) {
+        generoRepo.deleteById(id);
+
+        return "redirect:/genero/list";
+    }
 }
